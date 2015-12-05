@@ -91,5 +91,10 @@ InetSocketAddress service = discoverer.getService();
 discoverer.stop();
 ```
 
-This class implements `Managed`, so be sure to add the following in your application's lifecycle. If this is
-done, `#start` and `#stop` methods do not need to be called.
+This class implements `Managed`, so be sure to add the following in your application's lifecycle:
+
+```
+environment.lifecycle().manage(discoverer);
+```
+
+If this is done, `#start` and `#stop` methods do not need to be called.
