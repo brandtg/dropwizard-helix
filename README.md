@@ -11,6 +11,22 @@ Service Discovery
 A very simple use case is service discovery. In Helix terms, we model each service as a Cluster, and
 services are Instances within that cluster.
 
+First build and install install into your local repo:
+
+```
+mvn install
+```
+
+Then add the dependency in your project
+
+```
+<dependency>
+    <groupId>com.github.brandtg</groupId>
+    <artifactId>dropwizard-helix</artifactId>
+    <version>1.0-SNAPSHOT</version>
+</dependency>
+```
+
 _(TODO: Publish artifact to maven central, then put dependency snippet here)_
 
 To enable a Dropwizard application with service discovery, add the following to your configuration class:
