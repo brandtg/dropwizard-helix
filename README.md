@@ -5,43 +5,23 @@ This project integrates [Dropwizard](http://www.dropwizard.io/), a Java web serv
 with [Apache Helix](http://helix.apache.org/), a cluster management framework for partitioned and replicated
 distributed resources.
 
+To include this library in your project, add the following dependency
+
+```
+<dependency>
+  <groupId>com.github.brandtg</groupId>
+  <artifactId>dropwizard-helix</artifactId>
+  <version>0.0.1</version>
+</dependency>
+```
+
 Service Discovery
 -----------------
 
 A very simple use case is service discovery. In Helix terms, we model each service as a Cluster, and
 services are Instances within that cluster.
 
-First build and install install into your local repo:
-
-```
-mvn install
-```
-
-Then add the dependency in your project
-
-```
-<dependency>
-    <groupId>com.github.brandtg</groupId>
-    <artifactId>dropwizard-helix</artifactId>
-    <version>1.0-SNAPSHOT</version>
-</dependency>
-```
-
-_(TODO: Publish artifact to maven central, then put dependency snippet here)_
-
-To enable a Dropwizard application with service discovery, add the following to your configuration class:
-
-```java
-public class MyConfiguration extends Configuration {
-    private HelixServiceDiscoveryConfiguration helix;
-    
-    public HelixServiceDiscoveryConfiguration getHelix() {
-        return helix;
-    }
-}
-```
-
-Next, add the bundle in your Application's `initialize` method, e.g.:
+First, add the bundle in your Application's `initialize` method, e.g.:
 
 
 ```java
