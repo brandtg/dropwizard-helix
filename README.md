@@ -1,6 +1,8 @@
 dropwizard-helix
 ================
 
+[![Build Status](https://travis-ci.org/brandtg/dropwizard-helix.svg?branch=master)](https://travis-ci.org/brandtg/dropwizard-helix)
+
 This project integrates [Dropwizard](http://www.dropwizard.io/), a Java web service framework,
 with [Apache Helix](http://helix.apache.org/), a cluster management framework for partitioned and replicated
 distributed resources.
